@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<section>
+		<div class="bannerVideo" id="slideShow">
+			<video src="video2.mp4" autoplay muted loop class="active"></video>
+			<video src="video1.mp4" autoplay muted loop ></video>
+			<video src="video3.mp4" autoplay muted loop ></video>
+			<video src="video4.mp4" autoplay muted loop ></video>
+			<video src="video5.mp4" autoplay muted loop ></video>
+		</div>
+		<div class="container">
+			<header id="navbar">
+				<a href="#" class="logo">Explore India</a>
+			</header>
+
+			<div class="content">
+				<div class="bannerText" id="slideShowText">
+					<div class="active">
+						<h2>Gujarat</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+
+					<div>
+						<h2>Rajasthan</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+
+					<div>
+						<h2>Himachal</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+
+					<div>
+						<h2>Kerala</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+
+					<div>
+						<h2>Forest</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					</div>
+				</div>
+			</div>
+			
+
+			<ul class="controls">
+				<li onclick="prevSlide(); prevSlideText();"><img src="left.png"></li>
+				<li onclick="nextSlide(); nextSlideText();"><img src="right.png"></li>
+			</ul>
+		</div>
+	</section>
+
+	<script>
+		const slideShow = document.getElementById('slideShow');
+		const slides = slideShow.getElementsByTagName('video');
+		var index = 0;
+
+		function nextSlide(){
+			slides[index].classList.remove('active');
+			index = (index + 1) % slides.length;
+			slides[index].classList.add('active');
+		}
+
+		function prevSlide(){
+			slides[index].classList.remove('active');
+			index = (index - 1  + slides.length) % slides.length;
+			slides[index].classList.add('active');
+		}
+
+
+
+		const slideShowText = document.getElementById('slideShowText');
+		const slidesText = slideShowText.getElementsByTagName('div');
+		var i = 0;
+
+		function nextSlideText(){
+			slidesText[i].classList.remove('active');
+			i = (i + 1) % slidesText.length;
+			slidesText[i].classList.add('active');
+		}
+
+		function prevSlideText(){
+			slidesText[i].classList.remove('active');
+			i = (i - 1  + slidesText.length) % slidesText.length;
+			slidesText[i].classList.add('active');
+		}
+
+		
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
